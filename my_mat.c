@@ -3,7 +3,7 @@
 #define rows 10
 #define columns 10
 
-void initialize(int matrix[][rows]) {
+void initialize(int matrix[columns][rows]) {
 
     for (int i = 0; i < columns; i++) {
         for (int j = 0; j < rows; j++) {
@@ -24,7 +24,7 @@ void path(int matrix[columns][rows]) {
     for (int i = 0; i < columns; i++){
         for (int j = 0; j < rows; j++){
             if(i == j){matrix[i][j] = __INT_MAX__;}
-            if(matrix[i][j] = 0){matrix[i][j] = __INT_MAX__;}
+            if(matrix[i][j] == 0){matrix[i][j] = __INT_MAX__;}
         }
         
     }
@@ -41,7 +41,7 @@ void path(int matrix[columns][rows]) {
     
 }
 
-int shortestPath(int matrix[columns][rows]) {
+void shortestPath(int matrix[columns][rows]) {
 
     int c = 0;
     int r = 0;
@@ -52,7 +52,7 @@ int shortestPath(int matrix[columns][rows]) {
     for (int i = 0; i < columns; i++){
         for (int j = 0; j < rows; j++){
             if(i == j){matrix[i][j] = __INT_MAX__;}
-            if(matrix[i][j] = 0){matrix[i][j] = __INT_MAX__;}
+            if(matrix[i][j] == 0){matrix[i][j] = __INT_MAX__;}
         }
         
     }
@@ -65,6 +65,6 @@ int shortestPath(int matrix[columns][rows]) {
             }
         }
     }
-    if(matrix[c][r] !=  __INT_MAX__){return matrix[c][r];}
-    return -1;
+    if(matrix[c][r] !=  __INT_MAX__){printf("%d", matrix[c][r]);}
+    else{printf("%d", -1;)}
 }

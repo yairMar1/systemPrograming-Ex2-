@@ -13,10 +13,9 @@ char x;
 //printf("Choose a letter");
 scanf("%c" , &x);
 
-if(x == 'A'){initialization(matrix);}
+if(x == 'A'){initialize(matrix);}
 else if(x == 'B'){path(matrix);}
-else if(x == 'C'){int result = shortestPath(matrix);
-        printf("Shortest path: %d\n", result);}
+else if(x == 'C'){shortestPath(matrix);}
 if(x == 'D'){return 0;}//finish the program
 
 return 0;
