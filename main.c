@@ -13,7 +13,7 @@ char x;
 //printf("Choose a letter");
 scanf("%c" , &x);
 
-while(!d){
+while(!'d'){
         if(x == 'A'){initialize(matrix);}
         else if(x == 'B'){path(matrix);}
         else if(x == 'C'){shortestPath(matrix);}
