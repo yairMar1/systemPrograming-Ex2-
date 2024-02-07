@@ -23,7 +23,7 @@ void path(int matrix[columns][rows]) {
 
     for (int i = 0; i < columns; i++){
         for (int j = 0; j < rows; j++){
-            if(i == j){matrix[i][j] = __INT_MAX__;}
+            //if(i == j){matrix[i][j] = __INT_MAX__;}
             if(matrix[i][j] == 0){matrix[i][j] = __INT_MAX__;}
         }
         
@@ -51,7 +51,7 @@ void shortestPath(int matrix[columns][rows]) {
 
     for (int i = 0; i < columns; i++){
         for (int j = 0; j < rows; j++){
-            if(i == j){matrix[i][j] = __INT_MAX__;}
+            //if(i == j){matrix[i][j] = __INT_MAX__;}
             if(matrix[i][j] == 0){matrix[i][j] = __INT_MAX__;}
         }
         
