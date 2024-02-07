@@ -18,6 +18,7 @@ while(x != 'd'){
         else if(x == 'B'){path(matrix);}
         else if(x == 'C'){shortestPath(matrix);}
         //if(x == 'D'){return 0;}//finish the program
+        scanf(" %c", &x);
 }
 
 return 0;
