@@ -4,12 +4,12 @@ main.o: main.c my_mat.o
 my_mat.o: my_mat.c my_mat.h
 	gcc -c my_mat.c -o my_mat.o
 
-main: main.o
-	gcc -Wall main.o -o main
+my_graph: main.o
+	gcc -Wall main.o -o my_graph
 
 .PHONY: clean all
 
-all: main
+all: my_graph
 
 clean:
-	rm -f *.o main
+	rm -f *.o my_graph
