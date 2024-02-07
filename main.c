@@ -10,7 +10,7 @@ int matrix [columns][rows];
 
 char x;
 
-printf("Choose a letter");
+//printf("Choose a letter");
 scanf("%c" , &x);
 
 if(x == 'A'){initialization(matrix);}

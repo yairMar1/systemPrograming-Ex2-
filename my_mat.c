@@ -7,7 +7,7 @@ void initialize(int matrix[][rows]) {
 
     for (int i = 0; i < columns; i++) {
         for (int j = 0; j < rows; j++) {
-            printf("Enter the value for matrix[%d][%d]: ", i, j);
+            //printf("Enter the value for matrix[%d][%d]: ", i, j);
             scanf("%d", &matrix[i][j]);
         }
     }
@@ -18,7 +18,7 @@ void path(int matrix[columns][rows]) {
     int c = 0;
     int r = 0;
 
-    printf("Enter which vertices you want to check");
+    //printf("Enter which vertices you want to check");
     scanf("%d" "%d" , &c ,&r);
 
     for (int i = 0; i < columns; i++){
@@ -46,7 +46,7 @@ int shortestPath(int matrix[columns][rows]) {
     int c = 0;
     int r = 0;
 
-    printf("Enter which vertices you want to check");
+    //printf("Enter which vertices you want to check");
     scanf("%d" "%d" , &c ,&r);
 
     for (int i = 0; i < columns; i++){
