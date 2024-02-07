@@ -13,10 +13,12 @@ char x;
 //printf("Choose a letter");
 scanf("%c" , &x);
 
-if(x == 'A'){initialize(matrix);}
-else if(x == 'B'){path(matrix);}
-else if(x == 'C'){shortestPath(matrix);}
-if(x == 'D'){return 0;}//finish the program
+while(!d){
+        if(x == 'A'){initialize(matrix);}
+        else if(x == 'B'){path(matrix);}
+        else if(x == 'C'){shortestPath(matrix);}
+        //if(x == 'D'){return 0;}//finish the program
+}
 
 return 0;
 }
