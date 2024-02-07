@@ -66,5 +66,5 @@ void shortestPath(int matrix[columns][rows]) {
         }
     }
     if(matrix[c][r] !=  __INT_MAX__){printf("%d", matrix[c][r]);}
-    else{printf("%d", -1;)}
+    else{printf("%d", -1);}
 }
