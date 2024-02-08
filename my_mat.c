@@ -20,17 +20,18 @@ void path(int matrix[columns][rows]) {
 
     scanf("%d" "%d" , &c ,&r);
 
-    //for (int i = 0; i < columns; i++){
-      //  for (int j = 0; j < rows; j++){
-          //  if(i == j){matrix[i][j] = 0;}
-        //    if(matrix[i][j] == 0){matrix[i][j] = INT_MAX;}
-      //  }
-    //}
+    for (int i = 0; i < columns; i++){
+        for (int j = 0; j < rows; j++){
+            //if(i == j){matrix[i][j] = 0;}
+            //if(matrix[i][j] == 0){matrix[i][j] = INT_MAX;}
+            if(i == j || matrix[i][j] == 0){matrix[i][j] = INT_MAX;}
+        }
+    }
     
     for(int k=0 ; k < columns ; k++){
         for(int i=0 ; i < columns ; i++){
             for (int j = 0; j < rows; j++){
-                 if( i == j || matrix[i][j] == 0){matrix[i][j] = INT_MAX;}
+                 if(i == j || matrix[i][j] == 0){matrix[i][j] = INT_MAX;}
                  else if (matrix[i][k] == INT_MAX || matrix[k][j] == INT_MAX ){continue;}
                  else if (matrix[i][j] > matrix[i][k] + matrix[k][j]) {matrix[i][j] = matrix[i][k] + matrix[k][j];}
              }
