@@ -11,14 +11,14 @@ int matrix [columns][rows];
 char x;
 
 //printf("Choose a letter");
-scanf("%c" , &x);
+scanf("%c", &x);
 
-while(x != 'd'){
+while(x != 'D'){
         if(x == 'A'){initialize(matrix);}
         else if(x == 'B'){path(matrix);}
         else if(x == 'C'){shortestPath(matrix);}
         //if(x == 'D'){return 0;}//finish the program
-        scanf(" %c", &x);
+        scanf("%c", &x);
 }
 
 return 0;
