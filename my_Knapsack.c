@@ -38,7 +38,7 @@ for (size_t i = 0; i <= prudacts; i++){
         
         if (i==0 || w==0){bag[i][w] = 0;}
 
-        else if(weights[i]<=w){bag[i][w] = max(values[i]+bag[i-1][w-weights[i]],bag[i-1][w]);}
+        else if(weights[i-1]<=w){bag[i][w] = max(values[i-1]+bag[i-1][w-weights[i-1]],bag[i-1][w]);}
 
         else {bag[i][w] = bag[i-1][w];}
 
@@ -49,8 +49,8 @@ int i = prudacts;
 int j = capacity;
 
 while (i>0 && j>0){
-    if(bag[i][j] == bag[i-1][j]){selected_bool[i] = 0; i--;}
-    else{selected_bool[i] = 1;i--;j=j-weights[i];}
+    if(bag[i][j] == bag[i-1][j]){selected_bool[i-1] = 0; i--;}
+    else{selected_bool[i-1] = 1;i--;j=j-weights[i-1];}
 }
 
 return (bag [prudacts][capacity]);
