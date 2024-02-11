@@ -20,7 +20,7 @@ for (size_t i = 0; i < prudacts; i++){
     weights[i] = scanf("%d" , &z);
 }
 
-int maxProfit = knapSack(weights, values, selected_bool, prudacts);
+int maxProfit = knapSack(weights, values, selected_bool);
 printf("Maximum profit: %d" ,maxProfit);
 
 int counter = 0;
@@ -31,11 +31,14 @@ for (size_t i = 0; i < prudacts; i++){
 printf("Items that give the maximum profit: [");
 
 for (size_t i = 0; i < prudacts; i++){
-    if(selected_bool[i] == 1){printf("%c" ,item[i]);}
+    if(selected_bool[i] == 1){printf("%c" ,items[i]);}
     if(counter > 0){printf(", ");counter--;}
 }
 printf("]");
 
+}
+int max(int a, int b) {
+    return (a > b) ? a : b;
 }
 
 int knapSack(int weights[], int values[] , int selected_bool[]){
@@ -45,7 +48,7 @@ int bag [prudacts+1][capacity+1];
 for (size_t i = 0; i <= prudacts; i++){
     for (size_t w = 0; w <= capacity; w++){
         
-        if (i==0 || j==0){bag[i][w] = 0;}
+        if (i==0 || w==0){bag[i][w] = 0;}
 
         else if(weights[i]<=w){bag[i][w] = max(values[i]+bag[i-1][w-weights[i]],bag[i-1][w]);}
 
@@ -57,7 +60,7 @@ for (size_t i = 0; i <= prudacts; i++){
 int i = prudacts;
 int j = capacity;
 
-while (i>0 && w>0){
+while (i>0 && j>0){
     if(bag[i][j] == bag[i-1][j]){selected_bool[i] = 0; i--;}
     else{selected_bool[i] = 1;i--;j=j-weights[i];}
 }
