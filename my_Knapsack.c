@@ -15,7 +15,7 @@ int weights [prudacts];
 int selected_bool [prudacts];
 
 for (size_t i = 0; i < prudacts; i++){
-    items[i] = scanf("%c" , &x);
+    items[i] = scanf(" %c" , &x);
     values[i] = scanf("%d" , &y);
     weights[i] = scanf("%d" , &z);
 }
