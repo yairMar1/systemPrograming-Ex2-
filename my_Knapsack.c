@@ -23,18 +23,11 @@ for (size_t i = 0; i < prudacts; i++){
 int maxProfit = knapSack(weights, values, selected_bool);
 printf("Maximum profit: %d" ,maxProfit);
 
-int counter = 0;
-for (size_t i = 0; i < prudacts; i++){
-    if(selected_bool[i] == 1){counter++;}
-}
-
-printf("Items that give the maximum profit: [");
+printf("Selected items: ");
 
 for (size_t i = 0; i < prudacts; i++){
     if(selected_bool[i] == 1){printf("%c" ,items[i]);}
-    if(counter > 0){printf(", ");counter--;}
 }
-printf("]");
 
 }
 int max(int a, int b) {
