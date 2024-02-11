@@ -5,30 +5,25 @@
 
 int main(){
 
-char x = 0;
-int y = 0;
-int z = 0;
-
 char items [prudacts];
 int values [prudacts];
 int weights [prudacts];
-int selected_bool [prudacts];
+ int selected_bool[prudacts] = {0};
 
-for (size_t i = 0; i < prudacts; i++){
-    items[i] = scanf(" %c" , &x);
-    values[i] = scanf("%d" , &y);
-    weights[i] = scanf("%d" , &z);
-}
+ for (size_t i = 0; i < prudacts; i++) {
+        scanf(" %c %d %d", &items[i], &values[i], &weights[i]);
+    }
 
 int maxProfit = knapSack(weights, values, selected_bool);
 printf("Maximum profit: %d" ,maxProfit);
-
+printf("\n");
 printf("Selected items: ");
 
 for (size_t i = 0; i < prudacts; i++){
-    if(selected_bool[i] == 1){printf("%c" ,items[i]);}
+    if(selected_bool[i] == 1){printf("%c " ,items[i]);}
 }
 
+return 0;
 }
 int max(int a, int b) {
     return (a > b) ? a : b;
