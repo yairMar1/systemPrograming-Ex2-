@@ -48,9 +48,15 @@ for (size_t i = 0; i <= prudacts; i++){
 int i = prudacts;
 int j = capacity;
 
-while (i>0 && j>0){
-    if(bag[i][j] == bag[i-1][j]){selected_bool[i-1] = 0; i--;}
-    else{selected_bool[i-1] = 1;i--;j=j-weights[i-1];}
+while (i > 0 && j > 0) {
+    if (bag[i][j] == bag[i - 1][j]) {
+        selected_bool[i - 1] = 0; // Update selected_bool[i - 1] before updating i and j
+        i--;
+    } else {
+        selected_bool[i - 1] = 1; // Update selected_bool[i - 1] before updating i and j
+        j = j - weights[i - 1]; // Update j after updating i and selected_bool[i - 1]
+        i--;
+    }
 }
 
 return (bag [prudacts][capacity]);
